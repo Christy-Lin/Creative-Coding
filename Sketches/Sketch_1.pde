@@ -1,5 +1,4 @@
 // Christy Lin
-// Creative Coding
 // Sketch 1
 
 size(800, 800);
