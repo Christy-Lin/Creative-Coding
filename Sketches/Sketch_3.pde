@@ -40,7 +40,7 @@ int option = 1;
 void setup() {
   size(800, 800);
   background(0);
-  println("Press 1-4 to select different brush options. Press space bar to clear the canvas.");
+  println("Press 1-4 to select different brush options. Press 'r' to reset the brush to its default colors. Press 't' to reset rotation. Press space bar to clear the canvas.");
 }
 
 void draw() {
@@ -193,6 +193,43 @@ void keyPressed() {
   if (key == '4') {
     option = 4;
     println("Brush Four");
+  }
+  if (key == 'r') { // reset brush colors
+    stroke_r_one = 255;
+    stroke_g_one = 255;
+    stroke_b_one = 255;
+    fill_r_one = 255;
+    fill_g_one = 171;
+    fill_b_one = 150;
+    fill_green_bool_one = true;
+    fill_blue_bool_one = true;
+
+    stroke_r_two = 255;
+    stroke_g_two = 255;
+    stroke_b_two = 255;
+    fill_r_two = 17;
+    fill_g_two = 153;
+    fill_b_two = 173;
+    fill_red_bool_two = true;
+    fill_green_bool_two = true;
+    fill_blue_bool_two = true;
+
+    stroke_r_four = 0;
+    stroke_g_four = 0;
+    stroke_b_four = 0;
+    fill_r_four = 241;
+    fill_g_four = 111;
+    fill_b_four= 111;
+    r_bool_four = false;
+    g_bool_four = false;
+    b_bool_four = true;
+  }
+
+  if (key == 't') {  // reset rotations can be used to freeze brush and draw without it rotating
+    rotation_one = 1;
+    rotation_two = 1;
+    rotation_three = 1;
+    rotation_four = 1;
   }
 }
 
